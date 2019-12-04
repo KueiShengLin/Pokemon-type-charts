@@ -1,0 +1,44 @@
+#:kivy 1.10.1
+#: set default_font_size "12pt"
+#: set defaullt_font_name "C:/WINDOWS/Fonts/msjh.ttc"
+
+<Label>:
+    color: 0,0,0,1 # font color
+    font_size: default_font_size
+    font_name: defaullt_font_name
+
+
+<BackGroundLabel@Label>
+    background_color: 1,1,1,1
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<Button>:
+    color: 1,1,1,1
+    background_normal: "img/btn.png"
+
+<TypeGrid>:
+    rows: 19
+    cols: 19
+    spacing: 1.5,1.5
+    padding: 1.5,1.5,1.5,1.5
+
+    canvas.before:
+        Color:
+            rgba: 0.5, 0.5, 0.5, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<DescribeBox>
+    orientation: 'vertical'
+    canvas.before:
+        Color:
+            rgba: 0.5, 0.5, 0.5, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
